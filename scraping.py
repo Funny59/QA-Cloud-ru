@@ -6,12 +6,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
+url = input("Select URL: ")
 
 chrome_path = ChromeDriverManager().install()
 service = Service(executable_path=chrome_path)
 browser = Chrome(service=service)
-
-url = input("Select URL: ")
 
 browser.get(url)
 
